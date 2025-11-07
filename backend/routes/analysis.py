@@ -116,7 +116,7 @@ async def analyze_code_with_ai(code: str, language: str = "python") -> dict:
         """
 
         response = await client.chat.completions.create(
-            model="deepseek-r1-distill-llama-70b",
+            model="meta-llama/llama-4-maverick-17b-128e-instruct",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,  # Slightly higher temperature for more creative analysis
             max_tokens=6000   # Increased token limit for more detailed analysis
